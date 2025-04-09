@@ -1,0 +1,52 @@
+{
+  "name": "ceamo-app",
+  "version": "1.0.3",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.10",
+    "canvas": "^3.0.0",
+    "flyonui": "^1.3.0",
+    "inquirer": "^12.3.0",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "pdfkit": "^0.15.2",
+    "supabase": "^2.1.1"
+  },
+  "build": {
+    "appId": "com.ceamo.seuapp",
+    "productName": "Caixa-CEAMO",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "API/**/*",
+      "dist/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "src/**/*",
+      "renderer.js",
+      "tailwind.config.js",
+      "img/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "img/icon.png"
+    }
+  }
+}
